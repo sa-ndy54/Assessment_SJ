@@ -7,9 +7,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket = var.state_bucket
-    key    = "terraform/state"
-    region = var.region
+    # Configure these backend values via terraform init -backend-config
+    # Example: terraform init -backend-config="bucket=my-bucket" -backend-config="key=terraform/state" -backend-config="region=us-east-1"
   }
 }
 
